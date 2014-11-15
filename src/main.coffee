@@ -14,17 +14,16 @@ Alchemy::plugins.easyQuery = (instance) ->
     # assign HTML
     d3.select "#easyQuery"
       .html """
-              <div class='input-group form-control'>
-                <div class="dropdown">
-                  <select class="btn btn-default form-control" name="Queries" id="menu">
+            <form style="background-color:#000">
+              <div class='input-group form-control' style="background-color:#000;border:none;">
+                  <select class="btn btn-default form-control" name="Queries" id="menu" style="width:20%">
                   </select>
-                </div>
-                
-                <input id="query" class='form-control' placeholder='search term'>
-                <i id="querybtn" class='input-group-addon search-icon'>
+                <input id="query" class='form-control pull-right' placeholder='query' style="width:80%">
+                <i id="querybtn" type="submit" class='input-group-addon search-icon'>
                   <span class='fa fa-search fa-1x'></span>
                 </i>
               </div>
+            </form>
             """
     
     _.each _.keys(@backend.conf.query), (key)->
@@ -38,8 +37,13 @@ Alchemy::plugins.easyQuery = (instance) ->
     # build event handler
 
     backend = @backend
-    d3.select("#querybtn").on "click", ()->
+    submit = ()->
+      d3.event.preventDefault()
       inp = d3.select("#query").node().value
       queryType = d3.select("#menu").node().value
       query = backend.buildQuery inp, queryType
       backend.runQuery query
+
+    d3.select("#querybtn").on "click",     ()-> submit()
+    d3.selectAll("#easyQuery").on "submit", ()-> submit()
+
