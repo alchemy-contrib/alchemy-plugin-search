@@ -1,30 +1,21 @@
 easyQuery
 =========
 
-An easy to use plugin for querying neo4j without having to write cypher.
+An easy Alchemy UI for querying local databases.
 
-### using
+### use
 
+Include the script in `dist/` and set up your alchemy configuration like this:
 ~~~ js
-  var conf = {
-    dataSource: "...",
+  {
+    ...
     plugins: {
-        "neo4jBackend":{},
-	"easyQuery":{}
+      ...
+      easyQuery: {},
+      ...
     }
+    ...
   }
 ~~~
 
-
-### Custom Queries
-
-~~~ js
-      "easyQuery": {
-          "queries":{
-            "nodeType": "MATCH (n:###) RETURN n"
-           }
-       }
-~~~
-
-including a "queries" object in the "easyQuery" plugin configuration
-The ### in the cypher string 
+For easyQuery to work you also need to include a backend plugin such as the (neo4jBackend)[http://www.github.com/alchemy-contrib/alchemy-plugin-neo4jBackend] .
