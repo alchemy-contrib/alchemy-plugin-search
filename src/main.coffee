@@ -26,7 +26,7 @@ Alchemy::plugins.easyQuery = (instance) ->
                 </i>
               </div>
             """
-    debugger
+    
     _.each _.keys(@backend.conf.query), (key)->
       d3.select "#menu"
         .append "option"
