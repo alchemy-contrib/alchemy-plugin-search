@@ -12,8 +12,16 @@ module.exports = (grunt)->
         flatten: true
         # Compile .coffee files in the src/ folder
         src: 'src/*.coffee'
-        # Make them javascript files in the dist/ folder
+        # Make them javascript files in the dist/ and examples/ folder
         dest: 'dist/'
+        ext: '.js'
+      toExamples:
+        expand: true
+        flatten: true
+        # Compile .coffee files in the src/ folder
+        src: 'src/*.coffee'
+        # Make them javascript files in the dist/ and examples/ folder
+        dest: 'examples/'
         ext: '.js'
 
     # Task to run tests

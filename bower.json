@@ -9,5 +9,8 @@
     "test"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "alchemy-plugin-neo4jbackend": "../alchemy-plugin-neo4jbackend",
+    "alchemyjs": "../../alchemy#release-0.4.1"
+  }
 }

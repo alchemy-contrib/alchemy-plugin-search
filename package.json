@@ -10,7 +10,13 @@
     "type": "git",
     "url": "https://github.com/alchemy-contrib/alchemy-plugin-neo4jbackend"
   },
-  "keywords": ["AlchemyJS", "Alchemy", "Graph", "Graph Visualization", "Graph Database"],
+  "keywords": [
+    "AlchemyJS",
+    "Alchemy",
+    "Graph",
+    "Graph Visualization",
+    "Graph Database"
+  ],
   "author": "Matt Cox",
   "license": "AGPL",
   "dependencies": {
@@ -24,6 +30,7 @@
     "grunt-gh-pages": "~0.9.1",
     "mocha": "~1.12.1",
     "should": "~1.2.2",
-    "sinon": "~1.7.3"
+    "sinon": "~1.7.3",
+    "grunt-gh-pages": "^0.9.1"
   }
 }

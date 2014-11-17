@@ -1,23 +1,36 @@
-easyQuery
+Alchemy-Plugin-Search
 =========
 
-An easy Alchemy UI for querying local databases.
+A drop in search UI for Alchemy.js, allowing non-technical users to query without having to write code.
 
-### use
+### Usage
 
-Include the script in `dist/` and set up your alchemy configuration like this:
+Include the`dist/alchemy-plugin-search.js` in your web page **after** the alchemy.js script.  
+
+~~~ html
+<script src="path/to/alchemy.js"></script>
+<script src="path/to/alchemy-plugin-search.js"></script>
+~~~
+
+Set up your alchemy configuration like this:
+
 ~~~ js
+conf =   
   {
     ...
     plugins: {
       ...
-      easyQuery: {},
+      search: {},
       ...
     }
     ...
   }
+
+alchemyInstance = new Alchemy(conf);
 ~~~
 
-Include a div with the ID `easyQuery` for the plugin to build it's interface in.
+alchemy-search-plugin is meant to work with alchemy backends.  For instance the (neo4jBackend)[http://www.github.com/alchemy-contrib/alchemy-plugin-neo4jBackend].
 
-For easyQuery to work you also need to include a backend plugin such as the (neo4jBackend)[http://www.github.com/alchemy-contrib/alchemy-plugin-neo4jBackend] .
+By default, the search plugin detects any possible queries for the defined `backend`, and allows the user to run those queries.  Take a look at the examples or the (neo4jBackend)[http://www.github.com/alchemy-contrib/alchemy-plugin-neo4jBackend] for more on how to use multiple queries to read or write to the data base.
+
+For an example of an application like this, check out the examples, folder, or the [gh-pages](alchemy-contrib.github.io/alchemy-plugin-search) for this repo.
