@@ -1,11 +1,10 @@
 Alchemy::plugins.easyQuery = (instance) ->
   a: instance
-  conf: instance.conf.plugins["easyQuery"]
+  conf: instance.conf.plugins["easyQuery"] or {}
   init: ->
     # Fill in blank settings with the defaults
     defaultSettings =
       "backend": instance.conf.backend
-
     @conf = _.defaults @conf, defaultSettings
     @backend = instance.plugins[@conf.backend]
     @buildDash()
@@ -37,7 +36,7 @@ Alchemy::plugins.easyQuery = (instance) ->
     # build event handler
 
     backend = @backend
-    submit = ()->
+    submit = () ->
       d3.event.preventDefault()
       inp = d3.select("#query").node().value
       queryType = d3.select("#menu").node().value

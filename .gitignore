@@ -3,4 +3,5 @@ node_modules
 coverage
 future.sh
 build
+bower_components
 *.swp
