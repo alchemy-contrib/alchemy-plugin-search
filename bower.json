@@ -2,7 +2,7 @@
   "name": "alchemy-plugin-easyQuery",
   "version": "0.0.1",
   "main": [
-    "dist/neo4jbackend.js"
+    "dist/main.js"
   ],
   "ignore": [
     "app",

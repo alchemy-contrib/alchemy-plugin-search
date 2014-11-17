@@ -11,6 +11,22 @@
 <body>
 <div id="easyQuery"></div>
 
+<p>Example of Alchemy that can easily query a locally running neo4j database.</p>
+<p>Querying 127.0.0.1:7474</p></p>
+<br>
+
+<p>Enter search arguments seperated by a comma</p>
+
+<p>The "query label" setting takes just one argument, a node label.</p>
+<p>The cypher template looks like: "MATCH (n:{0})-[r]-(nn) RETURN n, nn, r LIMIT 100"</p>
+<br>
+
+<p>The "query by property" setting takes two arguments. Ex: "name, Melissa"</p>
+<p>The cypher template looks like: "MATCH (n)-[r]-(nn) WHERE n.{0} = '{1}' RETURN n, nn, r LIMIT 100"</p>
+<br>
+
+<p>Custom queries can be easily added</p>
+
 <div id="alchemy" class="alchemy">
 </div>
 

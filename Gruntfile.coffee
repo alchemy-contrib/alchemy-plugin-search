@@ -15,6 +15,7 @@ module.exports = (grunt)->
         # Make them javascript files in the dist/ and examples/ folder
         dest: 'dist/'
         ext: '.js'
+
       toExamples:
         expand: true
         flatten: true
@@ -37,7 +38,7 @@ module.exports = (grunt)->
     # Publish to gh-pages
     "gh-pages":
       options:
-        base: "docs"
+        base: "examples"
       src: ["**"]
 
   ###################################
@@ -54,4 +55,4 @@ module.exports = (grunt)->
   grunt.registerTask 'test', [ "coffee", "simplemocha"]
 
   # Publish documentation to gh-pages
-  grunt.registerTask 'docs', ["gh-pages"]
+  grunt.registerTask 'docs', ["coffee", "gh-pages"]
