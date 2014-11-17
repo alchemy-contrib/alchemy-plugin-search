@@ -11,6 +11,6 @@
   "dependencies": {},
   "devDependencies": {
     "alchemy-plugin-neo4jbackend": "../alchemy-plugin-neo4jbackend",
-    "alchemyjs": "../../alchemy#release-0.4.1"
+    "alchemyjs": "http://github.com/GraphAlchemist/alchemy.git#release-0.4.1"
   }
 }

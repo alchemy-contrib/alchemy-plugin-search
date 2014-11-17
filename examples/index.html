@@ -9,26 +9,23 @@
 </style>
 </head>
 <body>
-<div id="easyQuery"></div>
-
-<p>Example of Alchemy that can easily query a locally running neo4j database.</p>
-<p>Querying 127.0.0.1:7474</p></p>
-<br>
+<div id="explination" style="position: fixed; right:0; bottom: 0; width:500px; height:300px; z-index: 400; color: #e89619; background-color:rgba(0,0,0,0);" >
+  <p><b>Example of Alchemy that can easily query a locally running neo4j database</b>. -- Querying 127.0.0.1:7474</p>
 
 <p>Enter search arguments seperated by a comma</p>
 
 <p>The "query label" setting takes just one argument, a node label.</p>
-<p>The cypher template looks like: "MATCH (n:{0})-[r]-(nn) RETURN n, nn, r LIMIT 100"</p>
+<p>The cypher template looks like:</p><b>"MATCH (n:{0})-[r]-(nn) RETURN n, nn, r LIMIT 100"</b>
 <br>
 
 <p>The "query by property" setting takes two arguments. Ex: "name, Melissa"</p>
-<p>The cypher template looks like: "MATCH (n)-[r]-(nn) WHERE n.{0} = '{1}' RETURN n, nn, r LIMIT 100"</p>
+<p>The cypher template looks like:</p><b> "MATCH (n)-[r]-(nn) WHERE n.{0} = '{1}' RETURN n, nn, r LIMIT 100"</b>
 <br>
 
 <p>Custom queries can be easily added</p>
-
-<div id="alchemy" class="alchemy">
 </div>
+<div id="easyQuery"></div>
+<div id="alchemy" class="alchemy"></div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/d3/d3.min.js"></script>
@@ -62,14 +59,8 @@
             }, 
             "easyQuery": {}
         },
-        graphHeight: function() {
-            return 800
-        },
-        graphWidth: function() {
-            return 800
-        }
     };
-    searchDemoApp = new Alchemy(conf);
+    alchemy = new Alchemy(conf);
 </script>
 </body>
 </html>
