@@ -1,0 +1,28 @@
+{
+  "name": "alchemy-plugin-neo4jbackend",
+  "version": "0.1.0",
+  "description": "An Alchemyjs plugin for using Neo4j on the backend",
+  "main": "main.coffee",
+  "scripts": {
+    "test": "coffee -co js . && cp -R tests/data js/tests/data && istanbul cover node_modules/mocha/bin/_mocha -- -t 10000 --recursive js/tests -R spec -r should && cp README.md package.json js/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alchemy-contrib/alchemy-plugin-neo4jbackend"
+  },
+  "keywords": ["AlchemyJS", "Alchemy", "Neo4j", "Graph", "Graph Visualization"],
+  "author": "Matt Cox",
+  "license": "AGPL",
+  "dependencies": {
+    "async": "~0.2.9"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-simple-mocha": "^0.4.0",
+    "mocha": "~1.12.1",
+    "should": "~1.2.2",
+    "sinon": "~1.7.3"
+  }
+}
