@@ -2,6 +2,7 @@ module.exports = (grunt)->
   # Can work with coffeescript
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-simple-mocha'
+  grunt.loadNpmTasks 'grunt-gh-pages'
 
   # Configuration of tasks
   grunt.initConfig
