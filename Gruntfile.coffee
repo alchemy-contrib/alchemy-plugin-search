@@ -6,7 +6,7 @@ module.exports = (grunt)->
   # Configuration of tasks
   grunt.initConfig
     # coffeescript compilation
-    coffee:
+    "coffee":
       compile:
         expand: true
         flatten: true
@@ -17,7 +17,7 @@ module.exports = (grunt)->
         ext: '.js'
 
     # Task to run tests
-    simplemocha:
+    "simplemocha":
       options:
         globals: ['expect']
         timeout: 3000
@@ -25,6 +25,13 @@ module.exports = (grunt)->
         ui: 'bdd'
         reporter: 'tap'
       all: src: ['tests/*.coffee']
+
+    # Publish to gh-pages
+    "gh-pages":
+      options:
+        base: "docs"
+      src: ["**"]
+
   ###################################
   #         Declare tasks           #
   ###################################
@@ -37,3 +44,6 @@ module.exports = (grunt)->
   # that it will never be pushed with a broken (out of
   # date) dist file.
   grunt.registerTask 'test', [ "coffee", "simplemocha"]
+
+  # Publish documentation to gh-pages
+  grunt.registerTask 'docs', ["gh-pages"]
