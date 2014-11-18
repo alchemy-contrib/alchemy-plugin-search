@@ -4,4 +4,5 @@ coverage
 future.sh
 build
 bower_components
+.grunt/
 *.swp

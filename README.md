@@ -1,5 +1,5 @@
-easyQuery
-=========
+Search
+=======
 
 An easy Alchemy UI for querying local databases.
 
@@ -27,7 +27,7 @@ Include the script in `dist/` after the inclusion of Alchemy.js and set up your 
     ...
     plugins: {
       ...
-      easyQuery: {},
+      search: {},
       ...
     }
     ...
@@ -36,7 +36,7 @@ Include the script in `dist/` after the inclusion of Alchemy.js and set up your 
 
 Include a div with the ID `easyQuery` for the plugin to build it's interface in.
 
-For easyQuery to work you also need to include a backend plugin such as the (neo4jBackend)[http://www.github.com/alchemy-contrib/alchemy-plugin-neo4jBackend] .
+For search to work you also need to include a backend plugin such as the (neo4jBackend)[http://www.github.com/alchemy-contrib/alchemy-plugin-neo4jBackend] .
 
 ### configuration
 
@@ -52,7 +52,7 @@ If you have loaded multiple backends and wish to load one specifically, that can
 	...
     },
 
-    easyQuery: {
+    search: {
       backend: "neo4jBackend"
     }
   }

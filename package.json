@@ -1,5 +1,5 @@
 {
-  "name": "alchemy-plugin-easyQuery",
+  "name": "alchemy-plugin-search",
   "version": "0.1.0",
   "description": "An Alchemyjs plugin for querying graph databases",
   "main": "main.coffee",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alchemy-contrib/alchemy-plugin-easyQuery"
+    "url": "https://github.com/alchemy-contrib/alchemy-plugin-search"
   },
   "keywords": [
     "AlchemyJS",

@@ -1,6 +1,6 @@
-Alchemy::plugins.easyQuery = (instance) ->
+Alchemy::plugins.search = (instance) ->
   a: instance
-  conf: instance.conf.plugins["easyQuery"] or {}
+  conf: instance.conf.plugins["search"] or {}
   init: ->
     # Fill in blank settings with the defaults
     defaultSettings =
