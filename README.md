@@ -3,6 +3,8 @@ easyQuery
 
 An easy Alchemy UI for querying local databases.
 
+To see an example that queries your locally running neo4j server, go (here)[http://alchemy-contrib.github.io/alchemy-plugin-search/]
+
 ### Use
 
 Using easy query is simple:
